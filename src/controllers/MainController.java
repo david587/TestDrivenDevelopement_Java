@@ -14,7 +14,7 @@ public class MainController {
         new FileHandler().readFile();
     }
     public void showMessage() {
-        String content = "Valami\nVerzió: 0.1\nNagy János\nSzoft II N\n2022-12-12";
+        String content = "Valami\nVerzió: 0.1\nBaráth Dávid\nSzoft II N\n2022-12-12";
         JOptionPane.showMessageDialog(this.mainWindow.getContentPane(), content);        
     }
     

@@ -12,6 +12,14 @@ import models.FileHandler;
 
 public class SzotarTest {
     ArrayList<String> methodNameList;
+    FileHandler fileHandler;
+
+    @BeforeEach //végrehajtódik minden eggyess metofus elött
+    void initTest(){
+        fileHandler = new FileHandler();
+    }
+
+
     @BeforeEach
     void setMethodList() {
         this.methodNameList = new ArrayList<>();
@@ -44,13 +52,28 @@ public class SzotarTest {
         boolean hasFileName = this.fieldNameList.contains("fileName");
         assertTrue(hasFileName, "Hiba! A fileName mező nem létezik");
     }
+
+    @Test
+    void checkWordPairList(){
+        boolean hasWordPairList = this.fieldNameList.contains("wordPairList");
+        assertTrue(hasWordPairList, "Hiba! A wordList mező nem létezik");
+    }
+
     @Test
     void checkFileNameContent(){
         //megvizsgáljuk a file nevét
-        FileHandler fileHandler = new FileHandler();
+         fileHandler= new FileHandler();
         boolean isGoodName = fileHandler.fileName.equals("szotar.txt");
 
         assertTrue(isGoodName, "Hiba! A fájlnév nem szotar");
+    }
+
+    @Test
+    void checkWordListContent(){
+        fileHandler.fileName = "test/szotar.txt";
+        fileHandler.readFile();
+        int listSize = fileHandler.wordPairList.size();
+        assertEquals(3, listSize, "Hiba! A listában nincs 3 szópár");
     }
 
 }
