@@ -3,7 +3,7 @@
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "c:\\Users\\andras\\Library\\junit\\junit-jupiter-api-5.9.1.jar",
-        "c:\\Users\\andras\\Library\\junit\\junit-platform-console-standalone-1.9.1.jar"
+        "c:\\Users\\diak\\Documents\\Barath_David\\Asztali\\lib\\junit-jupiter-api-5.9.1.jar",
+        "c:\\Users\\diak\\Documents\\Barath_David\\Asztali\\lib\\junit-platform-console-standalone-1.9.1.jar"
     ]
 }
